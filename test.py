@@ -478,18 +478,19 @@ def Perhitungan():
     st.header('Perhitungan Ketidakpastian Pengukuran Bobot Atom (miu)')
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
 
-    def hitung_nilai_x(U):
+    def hitung_ketidakpastian(U):
         return U / math.sqrt(3)
 
-    # Input nilai U
-    U = st.number_input('Masukkan nilai U ', step=0.1)
-
-    # Hitung nilai x
-    x = hitung_nilai_x(U)
-
-    # Tampilkan hasil
-    st.write('Nilai ketidakpastian Pengukurannya adalah:', x,'mg/mmol')
     
+    
+    # Meminta pengguna untuk memasukkan nilai U
+    U = st.number_input('Masukkan nilai U :', format="%.5f")
+    
+    # Memanggil fungsi untuk menghitung ketidakpastian
+    hasil = hitung_ketidakpastian(U)
+    
+    st.write(f'Ketidakpastian pengukurannya = {hasil}')
+
     st.header('Perhitungan Bobot Molekul (BM)')
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Bobot Molekul:')
 
