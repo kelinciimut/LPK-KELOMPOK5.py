@@ -489,7 +489,7 @@ def Perhitungan():
     # Memanggil fungsi untuk menghitung ketidakpastian
     hasil = hitung_ketidakpastian(U)
     
-    st.write(f'Ketidakpastian pengukurannya = {hasil}')
+    st.write(f'Ketidakpastian pengukurannya = {hasil} mg/mmol')
 
     st.header('Perhitungan Bobot Molekul (BM)')
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Bobot Molekul:')
