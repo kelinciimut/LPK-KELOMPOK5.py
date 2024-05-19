@@ -36,7 +36,7 @@ def Pendahuluan():
     unsafe_allow_html=True
 )
     text = """
-    Tujuan utama dari pembuatan aplikasi ini adalah untuk memberikan platform yang mudah digunakan kepada mahasiswa Politeknik AKA Bogor dalam menghitung bobot molekul dan ketidakpastiannya, sehingga mendukung pembelajaran mereka dalam Mata Kuliah Titrimetri. Beberapa tujuan khusus dari pembuatan aplikasi ini adalah sebagai berikut: </div>
+    Tujuan utama dari pembuatan aplikasi ini adalah untuk memberikan platform yang mudah digunakan kepada mahasiswa Politeknik AKA Bogor dalam menghitung bobot molekul dan ketidakpastiannya, sehingga mendukung pembelajaran mahasiswa dalam Mata Kuliah Titrimetri. Beberapa tujuan khusus dari pembuatan aplikasi ini adalah sebagai berikut: </div>
     
     """
 
