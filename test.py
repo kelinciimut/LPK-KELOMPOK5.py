@@ -2,60 +2,187 @@ import streamlit as st
 import math
 
 # Fungsi untuk setiap menu
-def Perkenalan():
+def Aboutus():
     st.balloons()
-    st.header("PROJEK LPK 2024 KELOMPOK 5 ")
-    st.header("1D - Analisis Kimia")
-    st.subheader('NAMA ANGGOTA')
-    st.write('1. CHAFRINA PUTRI MARDITA')
-    st.write('2. HAYRUNNISA ')
-    st.write('3. IMELSYAZKA NAJLA BAHTIAR')
-    st.write('4. MAYSHYA IZZATI')
-    st.write('5. NABILA PUTRI RAMADANI')
-
-
+    st.header("Halo Users! Selamat Datang di Web kami💁🏻‍♀️")
+    st.write("Kami hadir untuk membantu Anda mencari Bobot Atom beserta ketidakpastiannya dan juga Perhitungan Ketidakpastian pengukuran Bobot Atom, Bobot Molekul, dan Mol.")
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    st.image('https://github.com/kelinciimut/ggggg/blob/64451931026653cfe859995ee5853445354b79a7/e8014dd6-d9cd-4348-b3d0-c875f5eb4621.jpeg?raw=true', caption='KELOMPOK 5', use_column_width=True)
+   
 def Pendahuluan():  
-    st.header("Latar Belakang")
-    st.subheader("Aplikasi merupakan Teknologi yang berkembang pesat pada saat ini, kemajuan teknologi dalam membantu pengolahan data atau informasi yang tersedia. Di Era sekarang Mahasiswa Politeknik AKA Bogor membutuhkan suatu aplikasi yang ringkas untuk membantu dalam mendapatkan informasi Bobot atom berserta ketidakpastiannya (U) untuk memenuhi keperluan pada Mata Kuliah Titrimetri. Selain itu, web kami juga dilengkapi dengan Perhitungan yang terdiri dari Perhitungan Ketidakpastian Pengukuran Bobot Atom, Perhitungan Bobot Molekul Senyawa,dan Perhitungan Mol.")
-    st.write("Pendekatan modern aplikasi kimia untuk memfasilitasi pengguna dalam mencari dan memahami bobot molekul kimia serta menghitung ketidakpastian bobot molekul adalah langkah progresif. Bobot molekul adalah massa relatif molekul dalam satuan atom yang disebut unit massa atom (u), dan digunakan dalam berbagai bidang kimia")
-    st.write("1. Akurasi Tinggi: Dengan algoritma perhitungan yang canggih, aplikasi dapat memberikan hasil yang akurat dan dapat diandalkan, termasuk perhitungan ketidakpastian pengukuran bobot atom, yang penting untuk penelitian yang lebih presisi.")
-    st.write("2. Pemahaman yang Lebih Baik: Pengguna dapat memahami sifat-sifat kimia dari zat tertentu dengan lebih baik melalui pemahaman bobot atomnya, sehingga membantu dalam pengembangan produk dan pemecahan masalah dalam berbagai aplikasi industri.")
-    st.write("3. Efisiensi: Aplikasi mengurangi waktu yang dibutuhkan untuk mencari dan menghitung bobot molekul, memungkinkan pengguna untuk fokus pada analisis data dan interpretasi hasil.")
-    st.write("Dengan demikian, aplikasi semacam itu membantu memajukan penelitian dan pengembangan dalam bidang kimia, memungkinkan ilmuwan dan insinyur untuk bekerja lebih efisien dan efektif dalam penelitian mereka, dan memungkinkan pengguna yang tidak terlatih secara teknis untuk mengakses informasi dan alat yang dibutuhkan untuk keperluan spesifik mereka.")
-
-    st.header("Tujuan Pembuatan Aplikasi")
-    st.write("Tujuan utama dari pembuatan aplikasi ini adalah untuk memberikan platform yang mudah digunakan kepada mahasiswa Politeknik AKA Bogor dalam menghitung bobot molekul dan ketidakpastiannya, sehingga mendukung pembelajaran mereka dalam Mata Kuliah Titrimetri. Beberapa tujuan khusus dari pembuatan aplikasi ini adalah sebagai berikut:")
+    st.header("Latar Belakang Pembuatan Web")
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    text = """
+    Di Era sekarang Mahasiswa Politeknik AKA Bogor membutuhkan suatu aplikasi yang ringkas untuk membantu dalam mendapatkan informasi Bobot atom berserta ketidakpastiannya (U) untuk memenuhi keperluan pada Mata Kuliah Titrimetri. Selain itu, web kami juga dilengkapi dengan Perhitungan yang terdiri dari Perhitungan Ketidakpastian Pengukuran Bobot Atom, Perhitungan Bobot Molekul Senyawa,dan Perhitungan Mol. </div>
     
-    st.write("1. Memberikan Akses yang Mudah: Aplikasi ini memberikan akses mudah bagi mahasiswa untuk mencari dan memahami bobot atom dari unsur kimia tertentu. Dengan hanya memasukkan simbol unsur, mereka bisa mendapatkan informasi yang relevan dengan cepat.")
-    st.write("2. Menghitung Ketidakpastian: Aplikasi ini akan memungkinkan pengguna untuk menghitung ketidakpastian pengukuran bobot atom, yang penting untuk penelitian yang akurat dan dapat diandalkan.")
-    st.write("3. Memfasilitasi Pembelajaran: Dengan memberikan akses mudah dan menyediakan informasi yang relevan, aplikasi ini akan membantu mahasiswa Politeknik AKA Bogor dalam memahami konsep-konsep kimia yang mendasari, serta meningkatkan efisiensi belajar mereka dalam Mata Kuliah Titrimetri.")
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+
+    st.markdown(html_content, unsafe_allow_html=True)
+    st.header("Tujuan Pembuatan Web")
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    text = """
+    Tujuan utama dari pembuatan aplikasi ini adalah untuk memberikan platform yang mudah digunakan kepada mahasiswa Politeknik AKA Bogor dalam menghitung bobot molekul dan ketidakpastiannya, sehingga mendukung pembelajaran mereka dalam Mata Kuliah Titrimetri. Beberapa tujuan khusus dari pembuatan aplikasi ini adalah sebagai berikut: </div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+
+    st.markdown(html_content, unsafe_allow_html=True)
+    text = """
+    1. Memberikan Akses yang Mudah: Aplikasi ini memberikan akses mudah bagi mahasiswa untuk mencari dan memahami bobot atom dari unsur kimia tertentu. Dengan hanya memasukkan simbol unsur, mereka bisa mendapatkan informasi yang relevan dengan cepat.</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
+    text = """
+    2. Menghitung Ketidakpastian: Aplikasi ini akan memungkinkan pengguna untuk menghitung ketidakpastian pengukuran bobot atom, yang penting untuk penelitian yang akurat dan dapat diandalkan. </div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
+    text = """
+    3. Memfasilitasi Pembelajaran: Dengan memberikan akses mudah dan menyediakan informasi yang relevan, aplikasi ini akan membantu mahasiswa Politeknik AKA Bogor dalam memahami konsep-konsep kimia yang mendasari, serta meningkatkan efisiensi belajar mereka dalam Mata Kuliah Titrimetri. </div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
+
     st.subheader("Perhitungan Ketidakpastian Pengukuran Bobot Atom (miu)")
-    st.write("Ketidakpastian (U) dalam perhitungan Bobot Atom yang sudah dicari dapat dimasukkan ke dalam persamaan:")
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    text = """
+    Ketidakpastian (U) dalam perhitungan Bobot Atom yang sudah dicari dapat dimasukkan ke dalam persamaan: </div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
    # Rumus untuk jumlah mol
     rumus_miu = r'miu = \frac{U}{K}'
 
     # Menampilkan rumus menggunakan st.latex()
     st.latex(rumus_miu)
-    st.write("Di mana U adalah ketidakpastian dalam Bobot atom yang dapat kita peroleh dari menu pencarian dan K adalah konstantanya.")
+    text = """
+    Di mana U adalah ketidakpastian dalam Bobot atom yang dapat kita peroleh dari menu pencarian dan K adalah konstantanya.</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
     st.subheader("Perhitungan Bobot Molekul senyawa (BM)")
-    st.write("BM dalam senyawa dapat kita hitung dengan memasukkan Bobot atom yang sudah kita peroleh dari halaman pencarian dan banyaknya atom yang diketahui melalui persamaan berikut:")
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    text = """
+    BM dalam senyawa dapat kita hitung dengan memasukkan Bobot atom yang sudah kita peroleh dari halaman pencarian dan banyaknya atom yang diketahui melalui persamaan berikut:</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
     # Rumus untuk bobot atom x jumlah atom
     rumus = r'BM = b_i \times j_i'
 
     # Menampilkan rumus menggunakan st.latex()
     st.latex(rumus)
-    st.write("di mana bi adalah Bobot atom yang bisa kita peroleh dari menu pencarian dan ji adalah jumlah atomnya.")
+    text = """
+    Di mana bi adalah Bobot atom yang bisa kita peroleh dari menu pencarian dan ji adalah jumlah atomnya.</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
     st.subheader("Perhitungan Mol (n)")
-    st.write("Mol dalam senyawa dapat kita hitung melalui persamaan berikut:")
-    rumus_mol = r'n = \frac{m}{mr}'
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
+    text = """
+    Mol dalam senyawa dapat kita hitung melalui persamaan berikut:</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
+    rumus_mol = r'n = \frac{m}{bm}'
     # Menampilkan rumus menggunakan st.latex()
     st.latex(rumus_mol)
-    st.write("di mana m adalah massa atom yang telah kita ketahui dan mr adalah bobot atom yang telah kita peroleh dari persamaan mencari BM diatas.")
+    text = """
+    Di mana m adalah massa atom yang telah kita ketahui dan bm adalah bobot atom yang telah kita peroleh dari persamaan mencari BM diatas.</div>
+    
+    """
+
+    html_content = f"""
+    <div style="text-align: justify;">
+    {text}
+    </div>
+    """
+    st.markdown(html_content, unsafe_allow_html=True)
+    
     st.subheader('note: Aplikasi ini dibuat berdasarkan Tabel data dalam IUPAC')
 def Pencarian():
     st.subheader("Masukkan informasi di bawah ini untuk menemukan Bobot Atom dan Ketidakpastiannya:")
-    
-    elements = []
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
     kode_unsur = st.text_input("Silahkan Masukkan Simbol Atom")
     cari = st.button("Memuat Hasil")
 
@@ -372,51 +499,51 @@ def Pencarian():
             st.header('Nama Atom: Rhenium')
             st.subheader('Bobot Atom: 186.207')
             st.write('Ketidakpastian Bobot Atom: ± 0,001')
-        elif(kode_unsur=='Rh '):
+        elif(kode_unsur=='Rh'):
             st.header('Nama Atom: Rhodium')
             st.subheader('Bobot Atom: 102.90550')
             st.write('Ketidakpastian Bobot Atom: ± 0,00002')
-        elif(kode_unsur=='Rb '):
+        elif(kode_unsur=='Rb'):
             st.header('Nama Atom: Rubidum')
             st.subheader('Bobot Atom: 85.4678')
             st.write('Ketidakpastian Bobot Atom: ± 0,0003')
-        elif(kode_unsur=='Ru '):
+        elif(kode_unsur=='Ru'):
             st.header('Nama Atom: Ruthenium')
             st.subheader('Bobot Atom: 101.07')
             st.write('Ketidakpastian Bobot Atom: ± 0,02')
-        elif(kode_unsur=='Sm '):
+        elif(kode_unsur=='Sm'):
             st.header('Nama Atom: Samarium')
             st.subheader('Bobot Atom: 150.36')
             st.write('Ketidakpastian Bobot Atom: ± 0,02')
-        elif(kode_unsur=='Sc '):
+        elif(kode_unsur=='Sc'):
             st.header('Nama Atom: Scandium')
             st.subheader('Bobot Atom: 44.955912')
             st.write('Ketidakpastian Bobot Atom: ± 0,000006')
-        elif(kode_unsur=='Se '):
+        elif(kode_unsur=='Se'):
             st.header('Nama Atom: Selenium')
             st.subheader('Bobot Atom: 78.96')
             st.write('Ketidakpastian Bobot Atom: ± 0,03')
-        elif(kode_unsur=='Si '):
+        elif(kode_unsur=='Si'):
             st.header('Nama Atom: Silicon')
             st.subheader('Bobot Atom: 28.0855')
             st.write('Ketidakpastian Bobot Atom: ± 0,0003')
-        elif(kode_unsur=='Ag '):
+        elif(kode_unsur=='Ag'):
             st.header('Nama Atom: Silver')
             st.subheader('Bobot Atom: 107.8682')
             st.write('Ketidakpastian Bobot Atom: ± 0,0002')
-        elif(kode_unsur=='Na '):
+        elif(kode_unsur=='Na'):
             st.header('Nama Atom: Sodium')
             st.subheader('Bobot Atom: 22.98976928')
             st.write('Ketidakpastian Bobot Atom: ± 0,00000002')
-        elif(kode_unsur=='Sr '):
+        elif(kode_unsur=='Sr'):
             st.header('Nama Atom: Strontium')
             st.subheader('Bobot Atom: 87.62')
             st.write('Ketidakpastian Bobot Atom: ± 0,01')
-        elif(kode_unsur=='S '):
+        elif(kode_unsur=='S'):
             st.header('Nama Atom: Sulfur')
             st.subheader('Bobot Atom: 32.065')
             st.write('Ketidakpastian Bobot Atom: ± 0,005')
-        elif(kode_unsur=='Ta '):
+        elif(kode_unsur=='Ta'):
             st.header('Nama Atom: Tantalum')
             st.subheader('Bobot Atom: 180.94788')
             st.write('Ketidakpastian Bobot Atom: ± 0,00002')
@@ -475,60 +602,71 @@ def Pencarian():
         else:
             st.write('Silahkan Masukkan Kode  dengan Benar')
 def Perhitungan():
-    st.header('Perhitungan Ketidakpastian Pengukuran Bobot Atom (miu)')
-    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
-
-    def hitung_ketidakpastian(U):
-        return U / math.sqrt(3)
-
+    st.header('Silahkan Pilih Jenis Perhitungan')
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
     
+    # Tombol untuk perhitungan ketidakpastian
+    if st.button('Perhitungan Ketidakpastian Pengukuran Bobot Atom (miu)'):
+        hitung_ketidakpastian()
+
+    # Tombol untuk perhitungan bobot molekul
+    if st.button('Perhitungan Bobot Molekul (BM)'):
+        hitung_bobot_molekul()
+
+    # Tombol untuk perhitungan jumlah mol
+    if st.button('Perhitungan Mol (n)'):
+        hitung_jumlah_mol()
+
+def hitung_ketidakpastian():
+    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
     
     # Meminta pengguna untuk memasukkan nilai U
     U = st.number_input('Masukkan nilai U :', format="%.5f")
     
     # Memanggil fungsi untuk menghitung ketidakpastian
-    hasil = hitung_ketidakpastian(U)
+    hasil = U / math.sqrt(3)
     
-    st.write(f'Ketidakpastian pengukurannya = {hasil} mg/mmol')
+    st.write(f'Ketidakpastian pengukurannya  {hasil} mg/mmol')
 
-    st.header('Perhitungan Bobot Molekul (BM)')
+def hitung_bobot_molekul():
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Bobot Molekul:')
-
-    def hitung_bobot_molekul(bobot_atom, jumlah_atom):
-        return bobot_atom * jumlah_atom
-
+    
     # Input bobot atom
     bobot_atom = st.number_input('Masukkan bobot atom ', step=0.01)  # Step disesuaikan dengan kebutuhan
-
+    
     # Input jumlah atom
     jumlah_atom = st.number_input('Masukkan jumlah atom', step=1)  # Step disesuaikan dengan kebutuhan
-
+    
     # Hitung bobot molekul
-    bobot_molekul = hitung_bobot_molekul(bobot_atom, jumlah_atom)
-
+    bobot_molekul = bobot_atom * jumlah_atom
+    
     # Tampilkan hasil
     st.write('Bobot Molekul (BM) adalah:', bobot_molekul, 'mg/mmol')
 
-    st.header("Perhitungan mol (n)")
+def hitung_jumlah_mol():
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung jumlah Mol:')
+    
     # Formulir input untuk massa dan Mr
     massa = st.number_input("Masukkan Massa (mg)")
-    Mr = st.number_input("Masukkan Mr (Bobot Atom)")
+    Mr = st.number_input("Masukkan bm (Bobot Molekul)")
     hitung = st.button("Hitung")
     
     if hitung:
         # Perhitungan jumlah mol
         mol = massa / Mr
         st.write(f"Jumlah Mol: {mol} mol")
-    
+
 # Daftar menu
 menu_items = {
-    "Perkenalan": Perkenalan,
+    "About us": Aboutus,
     "Pendahuluan": Pendahuluan,
-    "Pencarian": Pencarian,
-    "Perhitungan": Perhitungan, 
+    "Pencarian Bobot Atom beserta Ketidakpastiannya" : Pencarian,
+    "Kalkulator Perhitungan": Perhitungan, 
 }
-
+   
 # Sidebar
 selection = st.sidebar.radio("Menu", list(menu_items.keys()))
 
