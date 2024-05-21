@@ -601,27 +601,12 @@ def Pencarian():
             st.write('Ketidakpastian Bobot Atom: ± 0,00002')
         else:
             st.write('Silahkan Masukkan Kode  dengan Benar')
-def Perhitungan():
-    st.header('Silahkan Pilih Jenis Perhitungan')
+def PerhitunganK():
+    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
     st.markdown(
     '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
     unsafe_allow_html=True
 )
-    
-    # Tombol untuk perhitungan ketidakpastian
-    if st.button('Perhitungan Ketidakpastian Pengukuran Bobot Atom (miu)'):
-        hitung_ketidakpastian()
-
-    # Tombol untuk perhitungan bobot molekul
-    if st.button('Perhitungan Bobot Molekul (BM)'):
-        hitung_bobot_molekul()
-
-    # Tombol untuk perhitungan jumlah mol
-    if st.button('Perhitungan Mol (n)'):
-        hitung_jumlah_mol()
-
-def hitung_ketidakpastian():
-    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
     
     # Meminta pengguna untuk memasukkan nilai U
     U = st.number_input('Masukkan nilai U :', format="%.5f")
@@ -631,8 +616,12 @@ def hitung_ketidakpastian():
     
     st.write(f'Ketidakpastian pengukurannya  {hasil} mg/mmol')
 
-def hitung_bobot_molekul():
+def PerhitunganB():
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Bobot Molekul:')
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
     
     # Input bobot atom
     bobot_atom = st.number_input('Masukkan bobot atom ', step=0.01)  # Step disesuaikan dengan kebutuhan
@@ -646,8 +635,12 @@ def hitung_bobot_molekul():
     # Tampilkan hasil
     st.write('Bobot Molekul (BM) adalah:', bobot_molekul, 'mg/mmol')
 
-def hitung_jumlah_mol():
+def PerhitunganM():
     st.subheader('Masukkan Informasi di bawah ini untuk Menghitung jumlah Mol:')
+    st.markdown(
+    '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
+    unsafe_allow_html=True
+)
     
     # Formulir input untuk massa dan Mr
     massa = st.number_input("Masukkan Massa (mg)")
@@ -664,7 +657,9 @@ menu_items = {
     "About us": Aboutus,
     "Pendahuluan": Pendahuluan,
     "Pencarian Bobot Atom beserta Ketidakpastiannya" : Pencarian,
-    "Kalkulator Perhitungan": Perhitungan, 
+    "Kalkulator Perhitungan Ketidakpastian Pengukuran": PerhitunganK, 
+    "Kalkulator Perhitungan Bobot Molekul" : PerhitunganB,
+    "Kalkulator Perhitungan Mol" : PerhitunganM
 }
    
 # Sidebar
