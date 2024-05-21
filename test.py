@@ -602,14 +602,14 @@ def Pencarian():
         else:
             st.write('Silahkan Masukkan Kode  dengan Benar')
 def PerhitunganK():
-    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom:')
+    st.subheader('Masukkan Informasi di bawah ini untuk Menghitung Ketidakpastian Pengukuran Bobot Atom :')
     st.markdown(
     '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
     unsafe_allow_html=True
 )
     
     # Meminta pengguna untuk memasukkan nilai U
-    U = st.number_input('Masukkan nilai U :', format="%.5f")
+    U = st.number_input('Masukkan nilai Ketidakpastian Bobot Atom (U):', format="%.5f")
     
     # Memanggil fungsi untuk menghitung ketidakpastian
     hasil = U / math.sqrt(3)
